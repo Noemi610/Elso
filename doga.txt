@@ -1,0 +1,9 @@
+3.INSERT INTO `eredmenyek` (`futo`, `kor`, `ido`) VALUES ('1044', '4', '15765');
+4.SELECT fnev AS futok,szulev,ffi FROM `futok` WHERE ffi ="0"  
+ORDER BY `futok` ASC
+5.SELECT fnev SUM (2016-szulev)AS kor FROM `futok`WHERE kor >="42"
+6.SELECT futok.fnev,COUNT(eredmenyek.ido) AS darab FROM `futok`
+INNER JOIN eredmenyek 
+ON futok.fid=eredmenyek.futo  
+ORDER BY `eredmenyek`.`ido`  DESC
+WHERE "darab" <=10
